@@ -7,7 +7,7 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Build a Docker image
-      run: docker build -t example .
+      run: docker build -t mybuildimage --target build-env .
 
     - name: Run Snyk to check Docker image for vulnerabilities
       continue-on-error: true
